@@ -1,11 +1,16 @@
 import { Component } from "react";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import array from "../Components/array"
+import array from "../Components/array";
+import Workshops from "./Workshops/Workshops";
+import Footer from './ContactUS/Footer';
 
 import '../Styles/Home.css'
 
 class Home extends Component{
+     handleAnimation(){
+        
+    }
     render(){
         return(
             <div>
@@ -20,26 +25,27 @@ class Home extends Component{
                         <video  src={require("../images/initialVideo.mp4").default} loop autoPlay muted width="100%" height="100%">
 		                </video>
                      </label>
-		             <label for="s2" id="slide2"><img src={require('../images/suryaPoster.jpg').default}/></label>
+		             <label for="s2" id="slide2"><img src={require('../images/suryaPoster2.jpeg').default}/></label>
 		             <label for="s3" id="slide3"><img src={require('../images/cybernautPoster.jpeg').default}/></label>
 		             <label for="s4" id="slide4"><img src={require('../images/drinks.png').default}/></label>
-		             <label for="s5" id="slide5"><img src={require('../images/snacks.png').default}/></label>
+		             <label for="s5" id="slide5"><video  src={require("../images/video/video2.mp4").default} loop autoPlay muted width="100%" height="100%">
+		                </video></label>
 	            </section>
-               <div className="joinCommunity container mb-4 mt-3">
+               <div className="joinCommunity mx-5 mb-4 mt-3">
                     <div className="row">
-                        <div className="col-lg-7 col-md-6 col-12">
+                        <div className="col-lg-7 col-md-7 col-12">
                         <span className="jCques">Want to help people but don't know where to start ?</span><br/>
                         That's where we come in, we are a group of youngsters
                         who help students to pursue their jobs and skills
                        </div>
-                       <div className="col-12 col-md-6 col-lg-5 join-link-div">
-                          <a className="joinLink">JOIN OUR COMMUNITY</a>
+                       <div className="col-12 col-md-5 col-lg-5 join-link-div">
+                          <div style={{'width':'100%'}}><a className="joinLink">JOIN OUR COMMUNITY</a></div>
                        </div>
                     </div>
                 </div>
-                <h4 className="recent">RECENT</h4><span className="horiLine"></span>
-                <h4 className="announcements">ANNOUNCEMENTS</h4>
-                <div className="scroll container mb-3">
+                <h6 className="recent mx-5">RECENT</h6><span className="horiLine"></span>
+                <h6 className="announcements mx-5">ANNOUNCEMENTS</h6>
+                <div className="scroll mx-5 mb-3">
                    <div className="row">
                        <div className="col-lg-10 col-md-10 col-12 outer-border-announce">
                        <div className="border-announce">
@@ -48,10 +54,10 @@ class Home extends Component{
                                array.map((item)=>{
                                    return <li className="announce-list">
                                        <div className="row">
-                                       <div className="col-3 announcement-logo">
-                                       <img src={require("../images/reacting_logo.png").default}/>
+                                       <div className="col-lg-3 col-md-3 col-12 announcement-logo">
+                                       <img src={item.image}/>
                                        </div>
-                                       <div className="col-8 announcement-content">
+                                       <div className="col-12 col-lg-8 col-md-8 announcement-content">
                                            {item.content}
                                            <div style={{marginTop:"36px"}}><a className="regHere">Register Here</a></div>
                                        </div>
@@ -63,25 +69,14 @@ class Home extends Component{
                        </div>
                        </div>
                        <div className="col-lg-2 col-md-2 col-12 bigger-announce">
-                           <p className="size-1">The</p><p className="size-2">Last date</p><p className="size-3">To</p><p className="size-2">Register for</p>
-                           <p className="size-4">The</p><p className="size-2">Workshop</p><p className="size-3">is XYZ.</p><p className="size-2">So seize</p>
-                           <p className="size-5">this</p><p className="size-1">chance</p><p className="size-2">quickly.</p>
+                          <div className="white-division"></div>
+                          <div className="white-division"></div>
+                          <div className="white-division"></div>
                        </div>
                    </div>
                 </div>
-                <div className="weekly container mb-5 p-4">
-                    <h4 className="recent">WEEKLY</h4><span className="horiLine"></span>
-                    <h4 className="announcements">WEBINARS</h4>
-                    <div className="row">
-                        <div className="col-6 mt-3 poster">
-
-                        </div>
-                       <div className="col-5 mt-3">
-                          <div></div>
-                          <a className="webinarLink px-5">LINK</a>
-                        </div>
-                    </div>
-                </div>
+                <Workshops/>
+                <Footer/>
             </div>
         );
     }

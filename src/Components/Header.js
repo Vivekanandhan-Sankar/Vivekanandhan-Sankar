@@ -1,5 +1,8 @@
 import {Component} from 'react';
 import {NavItems} from './NavItems';
+import {useHistory} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+
 
 import '../Styles/Header.css'
  
@@ -8,16 +11,19 @@ class Header extends Component{
         super();
         this.state={
            clickedNavMenu : false,
+           current : "/home"
         }
     }
+
     handleClick=()=>{
         this.setState({
             clickedNavMenu : !this.state.clickedNavMenu
         })
     }
     render(){
+        const {current} = this.state;
         return(
-            <div className="container NavBar">
+            <div className="mx-5 NavBar">
                 <img src={require('../images/logoWriting.PNG').default} className="logoWriting" alt="logo"/>
                 <div className="NavIcon" onClick={this.handleClick}>
                     <i className={this.state.clickedNavMenu ? 'bi bi-x' : 'bi bi-list'}></i>
@@ -26,18 +32,26 @@ class Header extends Component{
                     {
                         NavItems.map((item,index)=>{
                             return(
-                            <li key={index}>
-                                <a className={item.className} href={item.url}>{item.name}</a>
+                            <li key={index}
+                            onClick={()=>{
+                                const url = `${item.url}`;
+                                this.props.history.push(url);
+                                this.setState({
+                                    current: item.url
+                                })
+                            }}>
+                                <a className={"navLinks" + (current === item.url ? " current":"")} 
+                                >{item.name}</a>
                             </li>
                             );
                         })
                     }
                 </ul>
-                <div className="search">SEARCH <i class="bi bi-search"></i></div>
-                <div className="signInButton">SIGN IN</div>
+                {/*<div className="search">SEARCH <i class="bi bi-search"></i></div>
+                <div className="signInButton">SIGN IN</div> */}
 
             </div>
         );
     }
 }
-export default Header;
+export default withRouter(Header);

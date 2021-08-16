@@ -1,0 +1,156 @@
+.about-us-box{
+    border:solid 4px #CBF1F5;
+    border-radius: 25px;
+}
+
+.horiLine{
+    display: inline-block;
+    height: 4px;
+    width: 48px;
+    margin-bottom: 4px;
+    background-color: black;
+    margin-left: 10px;
+    border-radius: 11px
+}
+@keyframes animateLine{
+    0%{
+        transition: ease-in-out;
+    }
+    25%{
+        transition: ease-out;
+    }
+    50%{
+        transition: ease-in;
+    }
+    75%{
+        transition: ease-out;
+    }
+    100%{
+        transition: ease-in;
+    }
+}
+
+.horiLine{
+    animation-name: expand;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+    transition: ease-in;
+}
+  
+  @keyframes expand {
+    0% {
+      transform: scaleX(0);
+    }
+    
+    100%{ transform: scaleX(1);
+    }
+  }
+.about-us-box p{
+    font-size: 1em;
+}
+.about-us{
+    display: inline-block;
+}
+.who-we-are{
+    font-weight: 770;
+}
+.highlight{
+    font-weight: 600;
+}
+.vission{
+    background-color: #CBF1F5;
+    border-radius: 20px;
+    
+}
+.mission{
+    border-radius: 20px;
+    background-color: #CBF1F5;
+    height: 100%;
+}
+#vis-heading{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 2vh;
+}
+#mis-heading{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 2vh;
+}
+.keypoints{
+    font-weight: 700;
+    margin-bottom: 1vh;
+}
+.read-more{
+    background: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 35px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.read-more-div{
+    text-align: center;
+    margin-top: 30px;
+}
+.persons-heading{
+   font-size: 1.3rem;
+   font-weight: 700;
+}
+.persons-content{
+    background: #CBF1F5;
+    /* padding: 30px; */
+    border-radius: 20px;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+.each-down{
+    background: white;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.each-image{
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.persons-name{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.persons-post{
+    font-size:0.9rem;
+}
+.each-person{
+    width: 84%;
+    margin-left: 8% !important;
+    margin-right: 8% !important;
+}
+@media screen and (max-width:1040px){
+    .persons-name{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:580px) {
+    .about-us-box{
+        margin-left: 3px !important;
+        margin-right: 3px !important;
+    }
+    .vis-and-mis{
+        margin-left: 3px !important;
+        margin-right: 3px !important;
+    }
+    .persons-content{
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+    .persons-heading{
+        margin-left: 3px !important;
+        text-align: center;
+        margin-right: 3px !important;
+    }
+}

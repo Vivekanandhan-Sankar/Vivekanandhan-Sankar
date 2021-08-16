@@ -14,6 +14,8 @@
     font-size: 30px;
     top:0px;
     z-index: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background: white;
 }
 .NavIcon{
@@ -44,8 +46,15 @@
 }
 .navLinks:hover{
     text-decoration: underline;
+    color: rgb(92, 83, 83);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.current{
+    text-decoration: underline;
     color: black;
-    font-size: 15px;
+    font-size: 16px;
     text-decoration-thickness: 3px;
     text-decoration-color:darkolivegreen;
 }
@@ -79,10 +88,12 @@
     cursor: pointer;
 }
 
-@media screen and (max-width:1026px) {
+@media screen and (max-width:732px) {
     .NavBar{
         position: sticky;
         top: 0px;
+        margin-left: 3px !important;
+        margin-right: 0px !important;
     }
     .search{
         position: absolute;
@@ -127,8 +138,9 @@
         transition: all 0.5s ease;
     }
     .nav-menu.active{
-        background-color: #cbf1f5e8;
+        background-color: #f8f9fa;
         left: 0;
+        top: 65px;
         opacity: 1;
         transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         z-index: 1;

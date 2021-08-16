@@ -1,27 +1,27 @@
 export const NavItems = [
     {
         name:'HOME',
-        url:'#',
+        url:'/home',
         className:'navLinks'
     },
     {
         name:'ABOUT US',
-        url:'#',
+        url:'/aboutus',
         className:'navLinks'
     },
     {
         name:'EVENTS',
-        url:'#',
+        url:'/events',
         className:'navLinks'
     },
-    {
+    /*{
         name:'BLOGS',
         url:'#',
         className:'navLinks'
-    },
+    },*/
     {
         name:'CONTACT US',
-        url:'#',
+        url:'/contact',
         className:'navLinks'
     },
 ]

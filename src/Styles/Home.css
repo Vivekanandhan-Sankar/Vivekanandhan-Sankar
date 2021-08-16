@@ -43,11 +43,10 @@
     margin-top: 6%;
 }
 .joinCommunity{
-    width:88%;
     position: relative;
     background: #CBF1F5;
-    margin-left: 6%;
     padding: 10px;
+    height: fit-content;
     border-radius: 10px;
     box-shadow: 0px 1px 9px 2px #cbb1b19e;
 }
@@ -68,17 +67,15 @@
     text-decoration: none;
     background-color: white;
     color: black;
+    float: right;
     font-weight: 700;
-    margin-left: 140px;
     border-radius: 10px;
-    padding: 31px;
-    font-size: 18px;
+    padding: 2rem 1.5rem ;
     padding-bottom: 10px;
     padding-top: 9px;
 }
 
 .jCques{
-    font-size: 20px;
     font-weight: 700;
 }
 .horiLine{
@@ -92,16 +89,16 @@
 }
 .recent{
     display: inline-block;
-    margin-left: 63px;
+    margin-right: 0px !important;
 }
 .announcements{
-    margin-left: 63px;
     color: darkblue;
     font-weight: 700;
    
 }
 .join-link-div{
-    padding:24px
+    padding:1%;
+    padding-right: 3%;
 }
 .regHere{
     text-decoration: none;
@@ -111,7 +108,6 @@
     padding-bottom: 5px;
     border-radius: 20px;
     background-color: white;
-    font-size: 16px;
     font-weight: 700;
     padding-top: 5px;
     text-transform: uppercase;
@@ -119,25 +115,7 @@
     padding-right: 10px;
 
 }
-.weekly{
-    
-    border-radius: 35px;
-    box-shadow: 0px 1px 9px 2px #cbb1b19e;
-}
-.poster{
-    height: 375px;
-    background-color: black;
-    border-radius: 20px;
-    margin-right: 20px;
-}
-.webinarLink{
-    background-color: white;
-    text-decoration: none;
-    color: black;
-    padding: 7px;
-    box-shadow: 0px 5px 10px 4px #cbb1b19e;
-    border-radius: 12px;
-}
+
 img{
     height:100%;
     width:100%;
@@ -146,6 +124,7 @@ input[type=radio]{
     position: inherit;
     left: 273px;
     top: 226px;
+    display: none;
 }
 #slider{
     margin-top: 10px;
@@ -187,7 +166,7 @@ input[type=radio]{
     box-shadow: 0 7px 13px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
 }
 .list-announcement{
-    height: 300px;
+    height: 360px;
     overflow-y: auto;
     padding-left: 0px;
     padding-right: 0px;
@@ -223,18 +202,16 @@ input[type=radio]{
     text-align: center;
 }
 .announcement-logo img{
-    width: 60%;
+    width: 50%;
 }
 .outer-border-announce{
     padding-left: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
     padding-right: 0px;
 }
 .bigger-announce{
     background: #CBF1F5;
     border-radius: 10px;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 26px;
     padding-left: 15px;
     box-shadow: 0px 1px 9px 2px #cbb1b19e;
@@ -275,10 +252,19 @@ input[type=radio]{
     font-weight: 700;
     margin-bottom: 0px;
 }
+.white-division{
+    height: 33%;
+    margin-bottom: 6%;
+    border-radius: 20px;
+    background: white;
+}
 @media screen and (max-width:1026px) {
+    .announcement-logo{
+        padding: 0px;
+        padding-bottom: 10px;
+    }
     .announcement-logo img{
-        width: 74%;
-        height: 74%;
+        width: 20%;
     }
     .c1{
         height: 200px;
@@ -312,29 +298,43 @@ input[type=radio]{
         border-top: 3.5px solid #9e9e9ed4;
         border-bottom: 3.5px solid #9e9e9ed4;
     }
-    .joinLink{
-        margin-left: 40px;
-    }
 }
 @media screen and (max-width:815px) {
+    .joinCommunity{
+        margin-left: 3px !important;
+        margin-right: 3px !important;
+    }
     .joinLink{
-        margin-left: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .recent{
+        margin-left: 4px !important;
+    }
+    .announcements{
+        margin-left: 4px !important;
+    }
+    .scroll{
+        margin-left: 4px!important;
+        margin-right: 4px !important;
     }
 }
 @media screen and (max-width:761px) {
-    .joinLink{
-        margin-left: 115px;
-    }
-    .announcement-logo img{
-        width: 74%;
-        height: 74%;
+    
+    .bigger-announce{
+        display: none;
     }
 }
 @media screen and (max-width:500px){
-    .joinLink{
-        margin-left:80px;
-    }
+    
     .bigger-announce{
         display: none;
+    }
+}
+@media screen and (min-height:1200px) {
+    .announcement-logo img{
+        width: 50%;
+        height: 50%;
+        margin-top: 50%;
     }
 }
