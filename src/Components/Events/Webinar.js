@@ -4,7 +4,7 @@ function Webinar(){
     return(
         <>
         
-        <div className="row mx-5 ">
+        <div className="row mx-5 " style={{'fontFamily':'Montserrat'}} >
           {
               eventArray.map((item)=>{
                   var image = item.image;

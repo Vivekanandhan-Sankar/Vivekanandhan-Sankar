@@ -1,7 +1,7 @@
 export const NavItems = [
     {
         name:'HOME',
-        url:'/home',
+        url:'/',
         className:'navLinks'
     },
     {

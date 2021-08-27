@@ -2,6 +2,7 @@ import {Component} from 'react';
 import {NavItems} from './NavItems';
 import {useHistory} from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
+import queryString from 'query-string';
 
 
 import '../Styles/Header.css'
@@ -11,9 +12,18 @@ class Header extends Component{
         super();
         this.state={
            clickedNavMenu : false,
-           current : "/home"
+           current : "/"
         }
     }
+    componentDidMount(){
+        const qs = queryString.parse(this.props.location.pathname);
+        let array=Object.keys(qs);
+        this.setState({
+            current:array[0]
+        })
+        debugger
+    }
+    
 
     handleClick=()=>{
         this.setState({
@@ -32,20 +42,25 @@ class Header extends Component{
                     {
                         NavItems.map((item,index)=>{
                             return(
-                            <li key={index}
+                            <li key={index} style={{'position':'relative'}}
                             onClick={()=>{
                                 const url = `${item.url}`;
                                 this.props.history.push(url);
                                 this.setState({
-                                    current: item.url
+                                    current:item.url
                                 })
-                            }}>
-                                <a className={"navLinks" + (current === item.url ? " current":"")} 
+                                this.handleClick()
+                            }}
+                            >
+                                <a className={"navLinks"} 
                                 >{item.name}</a>
+                                <span className={"underLine" + (current === item.url ? " show":"")} ></span>
                             </li>
                             );
                         })
+                        
                     }
+                    
                 </ul>
                 {/*<div className="search">SEARCH <i class="bi bi-search"></i></div>
                 <div className="signInButton">SIGN IN</div> */}

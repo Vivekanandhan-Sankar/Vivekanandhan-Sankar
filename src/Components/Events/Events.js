@@ -11,7 +11,7 @@ function Event(){
       <div className="heading">
             <span className="webinars">WEBINARS</span>
       </div>
-      <div className="row mx-lg-5 mx-1 mx-md-5 mb-5">
+      <div className="row mx-lg-5 mx-1 mx-md-5 mb-5" style={{'fontFamily':'Montserrat'}}>
           {
               eventArray.map((item)=>{
                   var image = item.image;

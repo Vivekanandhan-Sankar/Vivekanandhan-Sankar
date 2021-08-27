@@ -4,6 +4,7 @@
     background: white;
     height: 250px;
     position: relative;
+    cursor: pointer;
     border-radius: 10px;
 }
 .horiLine{
@@ -19,18 +20,20 @@
     border-radius: 10px;
     margin-top: 20px;
     background: #CBF1F5;
+    font-family: Montserrat;
 }
 .contact-us{
     display: inline-block;
     margin-right: 0px !important;
     font-weight: 700;
+    font-family: Montserrat;
 }
 .logo-image{
     position: absolute;
-    top: 30%;
+    top: 33%;
     left: 30%;
     width: 40%;
-    height: 40%;
+    height: 34%;
     visibility: hidden;
 }
 .contact-button:hover .logo-image{
@@ -40,12 +43,12 @@
 }
 .contact-button:hover .contact-button-in{
  -webkit-filter: grayscale(100%) blur(2px);
-  filter: grayscale(75%) blur(7px);
+  filter: grayscale(100%) blur(2px);
 }
 
 .footer-heading{
     letter-spacing: 10px;
-    font-family: poppins;
+    font-family: Montserrat;
     font-weight: 700;
 }
 .footer{
@@ -53,6 +56,7 @@
     text-align: center;
     padding-top: 5px;
     padding-bottom: 20px;
+    font-family: Montserrat;
 }
 .follow{
     letter-spacing: 5px;
@@ -77,4 +81,12 @@
 .copyrights{
     letter-spacing: 3px;
     font-weight: 500;
+}
+@media screen and (max-width:800px) {
+    .contact-button{
+        width: 75%;
+        height: 275px;
+        margin-left: 12%;
+    }
+    
 }

@@ -34,8 +34,10 @@
 .ongoing{
     display: inline-block;
     margin-right: 0px !important;
+    font-family: Montserrat;
 }
 .events{
+    font-family: Montserrat;
     font-weight: 700;
 }
 .webinars{
@@ -49,4 +51,5 @@
 }
 .heading{
     text-align: center;
+    font-family: Montserrat;
 }

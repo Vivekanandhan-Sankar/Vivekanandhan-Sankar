@@ -9,6 +9,7 @@
 }
 .NavBar{
     position: sticky;
+    font-family: Montserrat;
     display: flex;
     height: 65px;
     font-size: 30px;
@@ -47,17 +48,9 @@
 .navLinks:hover{
     text-decoration: underline;
     color: rgb(92, 83, 83);
-    font-size: 16px;
     text-decoration: none;
 }
 
-.current{
-    text-decoration: underline;
-    color: black;
-    font-size: 16px;
-    text-decoration-thickness: 3px;
-    text-decoration-color:darkolivegreen;
-}
 .signInButton{
     position: absolute;
     right: 0px;
@@ -87,7 +80,36 @@
     border-radius: 20px;
     cursor: pointer;
 }
-
+.underLine{
+    display: inline-block;
+    height: 3px;
+    width: 100%;
+    margin-bottom: 4px;
+    background-color: #8393a9;
+    border-radius: 11px;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    bottom: -3px;
+}
+.underLine{
+    animation-name: expand;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+    transition: ease-in;
+}
+.show{
+    visibility:visible;
+}
+  
+@keyframes expand {
+    0% {
+      transform: scaleX(0);
+    }
+    100%{ transform: scaleX(1);
+    }
+  }
 @media screen and (max-width:732px) {
     .NavBar{
         position: sticky;
@@ -182,4 +204,7 @@
         padding-bottom: 0px;
         margin-top: 4px;
     }  
+    .show{
+        visibility: hidden;
+    }
 }
